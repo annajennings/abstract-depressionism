@@ -1,0 +1,743 @@
+/*
+
+COLORS
+
+Blue: #0477BF
+Yellow: #F2B807
+White: #F2E6D0
+Orange: #F2911B
+Red: #BF2C2C
+
+Green: #032612
+
+*/
+
+/*
+
+TYPOGRAPHY
+ * hwt-mardell:
+ * mendl-sans-dawn:
+ * mendl-sans-dusk:
+ * neighbor:
+ * roc-grotesk:
+ * roc-grotesk-compressed:
+ * roc-grotesk-condensed:
+ * roc-grotesk-extrawide:
+ * roc-grotesk-wide:
+ */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* 
+  :root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+  */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  
+  body {
+    font-family: 'neighbor', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    width: 100vw;
+    height: 100vh;
+    line-height: 1.2;
+    overflow: auto;
+    margin: 0;
+    background-color: #F2E6D0;
+  }
+  
+  
+  h1 {
+    font-family: 'hwt-mardell', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 0;
+  }
+  
+  h2 {
+    font-family: 'roc-grotesk-wide', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  
+  h3 {
+    font-family: 'ROC Grotesque', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  h4 {
+    font-family: 'mendl-sans-dusk', sans-serif;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  h5 {
+    font-family: 'mendl-sans-dawn', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  h6 {
+    font-family: 'roc-grotesk-condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin: 0;
+  }
+   p {
+    margin: 0;
+    line-height: 1.3;
+    padding: 10px 0;
+   }
+  
+  img {
+    width: 100%;
+    box-shadow: 4px 3px 6px 1px rgb(0 0 0 / 50%);
+    border-radius: 5px;
+  }
+  
+  a {
+    color: #001137;
+    text-decoration: none;
+    font-family: 'interstate', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  
+  a:hover {
+    color: #001137;
+    text-decoration: underline; /* Underlining when hovering over a link */
+  }
+  
+  a:active {
+    /* selected link */
+    color: #597188;
+    text-decoration: underline; /* Underlining when hovering over a link */
+  }
+
+  /* LOGO ANIMIATION */
+  header {
+    background-color: #032612;
+    height: 30vh;
+    justify-content: left;
+    animation-name: headerSlideUp;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 3s;
+    animation-timing-function: ;
+    animation-fill-mode: both;
+  }
+
+  footer {
+    background-color: #000;
+    height: 20vh;
+  }
+  .logo,
+  .logo-mobile {
+    width: 100%;
+    position: relative;
+    animation: shrink 1s ease-out 6s 1 normal both;
+  }
+
+  .logo {
+    display: none;
+  }
+  
+  @media only screen and (min-width: 641px) {
+    .logo {
+      display: block;
+    }
+    .logo-mobile {
+      display: none;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+.a {
+  animation: logoLetters 750ms ease-out 0s 1 both;
+}
+.b {
+  animation: logoLetters 750ms ease-out 100ms 1 both;
+}
+.s {
+  animation: logoLetters 750ms ease-out 200ms 1 both;
+}
+.t {
+  animation: logoLetters 750ms ease-out 300ms 1 both;
+}
+.r {
+  animation: logoLetters 750ms ease-out 400ms 1 both;
+}
+.a2 {
+  animation: logoLetters 750ms ease-out 500ms 1 both;
+}
+.c {
+  animation: logoLetters 750ms ease-out 600ms 1 both;
+}
+.t2 {
+  animation: logoLetters 750ms ease-out 700ms 1 both;
+}
+.d {
+  animation: logoLetters 750ms ease-out 800ms 1 both;
+}
+.e {
+  animation: logoLetters 750ms ease-out 900ms 1 both;
+}
+.p {
+  animation: logoLetters 750ms ease-out 1s 1 both;
+}
+.r2 {
+  animation: logoLetters 750ms ease-out 1.1s 1 both;
+}
+.e2 {
+  animation: logoLetters 750ms ease-out 1.2s 1 both;
+}
+.s2 {
+  animation: logoLetters 750ms ease-out 1.3s 1 both;
+}
+.s3 {
+  animation: logoLetters 750ms ease-out 1.4s 1 both;
+}
+.i {
+  animation: logoLetters 750ms ease-out 1.5s 1 both;
+}
+.o {
+  animation: logoLetters 750ms ease-out 1.6s 1 both;
+}
+.n {
+  animation: logoLetters 750ms ease-out 1.7s 1 both;
+}
+.i2 {
+  animation: logoLetters 750ms ease-out 1.8s 1 both;
+}
+.s4 {
+  animation: logoLetters 750ms ease-out 1.9s 1 both;
+}
+.m {
+  animation: logoLetters 750ms ease-out 2s 1 both;
+}
+
+main {
+  background-color: #F2E6D0;
+  height: 60vh;
+}
+
+.container {
+  padding: 10px;
+  max-width: 100vw;
+}
+
+.box {
+  width: 500px;
+  height: 500px;
+}
+
+.a-blog {
+  animation: fadeIn 2s ease-out 7s 1 normal both;
+  color: #000;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  0% {
+opacity: 0;  }
+  100% {
+opacity: 1;  }
+}
+@keyframes shrink {
+  0% {
+    width: 100%;
+    margin-left: 0px;
+    padding: 10px 0;
+  }
+  100% {
+    width: 90%;
+    padding: 10px;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    position: absolute;
+    top: 0;
+    left: 100vw;
+  }
+
+  100% {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes headerSlideUp {
+  0% {
+    height: 20vh;
+    margin: 35vh 0;
+  }
+  100% {
+    height: 20vh;
+    margin: 0;
+  }
+}
+
+@keyframes logoLetters {
+  from {opacity: 0; transform: translate(0, 50%);}
+
+  to {opacity: 1; transform: translate(0, 0%);
+  }
+}
+
+.button {
+  display: inline-block;
+  background-color: #597188;  color: #ffecd6; 
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 10px;
+  border-bottom: 3px solid #001137;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+  margin: auto;
+  transition: color .3s linear;
+  animation-direction: normal;
+  width: 180px;
+
+}
+
+.button:hover {
+  color: #001137;
+  opacity: 0.8; 
+  text-decoration: none;
+  font-weight: 500;
+  background-color: #ff9a26;
+  font-weight: 500;
+  padding: 15px auto;
+  letter-spacing: 2px;
+  transition: all .3s linear;
+}
+
+  /* LIGHTBOX */
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  .modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 45%;
+    max-width: 1000px;
+  }
+  
+  /* Modal Content */
+  .modal2-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 45%;
+    max-width: 1000px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Caption text */
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  img.demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  /* -------------- end LIGHTBOX code -------------------------* /
+  
+  /* Menu toggle */
+
+  
+  li > a {
+    line-height: 1.5em;
+  }
+  
+  main {
+    padding-top:0px;
+  }
+  
+  nav > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .navtoggle li:not(:last-child) {
+    display: none;
+  }
+  
+  .row > .column {
+    padding: 0 8px;
+  }
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .navtoggle,
+  .navtoggle.responsive {
+    position: relative;
+  }
+  
+  .navtoggle li .icon {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    font-size: 20px;
+    padding-right: 0;
+  }
+  
+  .navtoggle.responsive li {
+    display: block;
+    padding: 10px 0;
+    text-align: right;
+  }
+  
+  .navtoggle.responsive nav {
+    padding: 24px 0 0;
+  }
+  
+  .navtoggle.responsive li:last-child {
+    padding: 0 0 10px;
+  }
+  
+  nav > ul > li > a { /* This code only selects links that are list elements within an unordered list within the nav element. */
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ffecd6;
+    text-decoration: none;
+    font-family: 'Interstate', sans-serif;
+    font-size: 18px;
+  }
+  
+  nav > ul > li > a:visited {
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ffecd6;
+  }
+  
+  nav > ul > li > a:hover {
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffecd6;
+  }
+  
+  nav > ul > li > a:active {
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #ffecd6;
+  }
+  
+  
+
+  
+  /* ANIMATION */
+
+  /* ==============================
+  Medium devices (640px or larger)
+  ================================= 
+  
+  @media only screen and (min-width: 641px) {
+  
+    /*layout
+    .container {
+      
+    }
+  
+    .row {
+      flex-wrap: nowrap;
+    }
+  
+    .col {
+      margin: 0 20px;
+    }
+  
+    .h3-mobile {
+      display: none;
+    }
+  
+    .h3-desktop {
+      display: block;
+  
+    }
+  
+  
+  /* HOME animations 
+  .logo {
+    width: 40%;
+    margin: 2vw;
+    padding: ;
+  }
+ 
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: right;
+  }
+  
+  ul.navigation {
+    margin: 3.5vw 30px 3.5vw 0;
+  }
+  
+  #roles {
+    flex-direction: row;
+  }
+  
+  #roles>.roles-box>h2 {
+    margin: 0 5vw;
+  }
+  .navtoggle {
+    width: 50%;
+  }
+    nav {
+      width: auto;
+      float: right;
+    }
+  
+    main {
+      padding-top: 0px;
+    }
+  
+    .navtoggle li:not(:last-child) {
+      display: inline-block;
+    }
+  
+    .navtoggle li:last-child {
+      display: none;
+    }
+  
+    nav > ul > li {
+      display: inline-block;
+    }
+  
+    nav > ul {
+      margin: 1em 0;
+    }
+
+  
+  /* ==============================
+  Large devices (1024px or larger)
+  ================================= 
+  @media only screen and (min-width: 1024px) {
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+
+    
+  .col-lg-80,
+  .col-lg-75,
+  .col-lg-60,
+  .col-lg-50,
+  .col-lg-40,
+  .col-lg-30,
+  .col-lg-33,
+  .col-lg-25,
+  .col-lg-20 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col-lg-20 {
+    flex: 1 1 20%;
+  }
+  
+  .col-lg-30 {
+    flex: 1 1 30%;
+  }
+  
+  .col-lg-33 {
+    flex: 1 1 33%;
+  }
+  
+  .col-lg-40 {
+    flex: 1 1 40%;
+  }
+  
+  .col-lg-50 {
+    flex: 1 1 50%;
+  }
+  
+  .col-lg-60 {
+    flex: 1 1 60%;
+  }
+  
+  .col-lg-75 {
+    flex: 1 1 75%;
+  }
+  
+  .col-lg-80 {
+    flex: 1 1 80%;
+  }
+  
+  .row.project .left {
+    margin-right: 20px;
+  }
+  
+  .row.project .right {
+    margin-left: 20px;
+  }
+  
+  */
